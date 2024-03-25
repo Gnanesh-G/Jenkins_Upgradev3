@@ -53,12 +53,12 @@ pipeline {
                 archiveArtifacts('*.war')
 
             }
+        }}
+post {
+        always {
+            cleanWs()
         }
-stage('Post'){
-echo "Completed Successfully!!!"
-
-
-}
-
     }
+
+    
 }
