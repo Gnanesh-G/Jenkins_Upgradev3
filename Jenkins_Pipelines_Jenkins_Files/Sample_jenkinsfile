@@ -26,7 +26,6 @@ pipeline {
             steps {
                 // Build your application here (e.g., compile, package, etc.)
                 bat '''
-                ls
                 echo "In Build Step"
                 '''
             }
