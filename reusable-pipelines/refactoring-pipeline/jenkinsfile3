@@ -46,17 +46,18 @@ pipeline {
 }
 
         stage('Publish') {
-            when {
-                expression { return params.RELEASE }
-            }
+            
 
             steps {
-                dir('./java-tomcat-sample/target'){
+            
                 archiveArtifacts('*.war')
-}
+
             }
         }
     }
+stage('Post'){
+echo "Completed Successfully!!!"
+
 
 
 }
