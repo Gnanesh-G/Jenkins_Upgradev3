@@ -54,10 +54,11 @@ pipeline {
 
             }
         }
-    }
 stage('Post'){
 echo "Completed Successfully!!!"
 
 
 }
+
+    }
 }
