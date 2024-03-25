@@ -49,7 +49,7 @@ pipeline {
             
 
             steps {
-               dir('./java-tomcat-sample'){
+               dir('./java-tomcat-sample/target'){
                 archiveArtifacts('*.war')}
 
             }
