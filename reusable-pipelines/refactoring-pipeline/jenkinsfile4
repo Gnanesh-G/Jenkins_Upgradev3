@@ -50,13 +50,14 @@ pipeline {
         }
     }
 }
+}
 
     post {
         always {
             cleanWs()
         }
     }
-}
+
 
 String getBuildVersion() {
     if (params.RELEASE) {
@@ -79,4 +80,5 @@ void packageApplication() {
         mvn versions:update-child-modules
         mvn clean package
     '''
-}}
+}
+
