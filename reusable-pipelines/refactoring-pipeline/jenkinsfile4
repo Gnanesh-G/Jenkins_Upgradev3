@@ -44,7 +44,7 @@ pipeline {
     steps {
         dir('./java-tomcat-sample/target') {
             // Debugging step to list contents of the directory
-            
+            bat 'dir'
             // Archiving artifacts
             archiveArtifacts('*.war')
         }
