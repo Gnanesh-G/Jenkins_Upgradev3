@@ -50,14 +50,14 @@ pipeline {
         }
     }
 }
-}
+
 
     post {
         always {
             cleanWs()
         }
     }
-
+}
 
 String getBuildVersion() {
     if (params.RELEASE) {
