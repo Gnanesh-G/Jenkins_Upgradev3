@@ -79,4 +79,4 @@ void packageApplication() {
         mvn versions:update-child-modules
         mvn clean package
     '''
-}
+}}
