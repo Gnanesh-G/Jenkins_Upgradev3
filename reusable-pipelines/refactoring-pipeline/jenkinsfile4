@@ -58,7 +58,7 @@ pipeline {
         }
     }
 }
-
+}
 String getBuildVersion() {
     if (params.RELEASE) {
         return env.RELEASE_VERSION + ':' + env.BUILD_NUMBER
