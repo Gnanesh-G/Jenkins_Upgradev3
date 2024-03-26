@@ -40,17 +40,16 @@ pipeline {
             }
         }
 
-        stage('Publish') {
-            // when {
-            //     expression { return params.RELEASE }
-            // }
-
-            steps {
-                 dir('./java-tomcat-sample/target') {
-                archiveArtifacts('*.war')}
-            }
+       stage('Publish') {
+    steps {
+        dir('./java-tomcat-sample/target') {
+            // Debugging step to list contents of the directory
+            bat 'dir'
+            // Archiving artifacts
+            archiveArtifacts('*.war')
         }
     }
+}
 
     post {
         always {
