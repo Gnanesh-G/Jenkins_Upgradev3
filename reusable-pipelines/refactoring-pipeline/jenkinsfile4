@@ -19,7 +19,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 dir('./java-tomcat-sample') {
-                    sh '''
+                    bat '''
                         echo "Executing Unit Tests..."
                         mvn test
                     '''
@@ -67,16 +67,15 @@ String getBuildVersion() {
 }
 
 void auditTools() {
-    sh '''
-        git version
+    bat '''
         java -version
         mvn -version
     '''
 }
 
 void packageApplication() {
-    sh '''
-        mvn versions:set -DnewVersion="${VERSION_SUFFIX}"-SNAPSHOT
+    bat '''
+        mvn versions:set -DnewVersion="${VERSION_SUFFIX}-SNAPSHOT"
         mvn versions:update-child-modules
         mvn clean package
     '''
